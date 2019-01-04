@@ -70,7 +70,7 @@ pip list | grep powerline > /dev/null 2>&1
 IS_POWERLINE_INSTALLED=$?
 
 
-if [[ $IS_POWERLINE_INSTALLED -gt 0 ]];then
+if [ $IS_POWERLINE_INSTALLED -gt 0 ];then
     fprint "INFO" "INSTALL POWERLINE..."
     # Requirements
     sudo apt-get install -qq fontconfig
@@ -88,15 +88,15 @@ if [ -d "\$HOME/.local/bin" ]; then
 fi
 EOF
 
-    if [[ "x${vim_support}" == "xyes" ]];then
+    if [ "x${vim_support}" == "xyes" ];then
         vim_support
     fi
 
-    if [[ "x${bash_support}" == "xyes" ]];then
+    if [ "x${bash_support}" == "xyes" ];then
         bash_support
     fi
 
-    if [[ "x${tmux_support}" == "xyes" ]];then
+    if [ "x${tmux_support}" == "xyes" ];then
         tmux_support
     fi
 else

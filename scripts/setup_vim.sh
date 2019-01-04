@@ -106,6 +106,7 @@ EOL
 # Install Vundle as vim plugin manager
 install_vundle
 # Download Plugins
+
 vim -c 'PluginInstall' -c 'qa!'
 cp /vagrant/helpers/py.template ~/.vim/bundle/vim-templates/templates/
 else

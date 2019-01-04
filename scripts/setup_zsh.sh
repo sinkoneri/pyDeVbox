@@ -3,7 +3,7 @@
 # Configuring zsh1
 zsh --version  > /dev/null 2>&1
 ZSH_IS_INSTALLED=$?
-if [[ $ZSH_IS_INSTALLED -gt 0 ]];then
+if [ $ZSH_IS_INSTALLED -gt 0 ];then
     fprint "INFO" "INSTALL OH-MY-ZSH..."
     # install requirements
     sudo apt-get install -qq zsh

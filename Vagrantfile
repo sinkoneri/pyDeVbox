@@ -137,14 +137,14 @@ Vagrant.configure("2") do |config|
   # Setup Git
   config.vm.provision "shell", path: "scripts/setup_git_env.sh", args: [git_email, git_username], privileged: false
 
+  # Setup vim
+  config.vm.provision "shell", path: "scripts/setup_vim.sh", privileged: false
+
   # Setup virtualenv
   config.vm.provision "shell", path: "scripts/setup_virtualenv.sh", privileged: false
 
   # Setup powerline: https://github.com/powerline/powerline
   config.vm.provision "shell", path: "scripts/setup_powerline.sh", args: [vim, bash, tmux], privileged: false
-
-  # Setup vim
-  config.vm.provision "shell", path: "scripts/setup_vim.sh", privileged: false
 
   # Setup oh-my-zsh: https://github.com/robbyrussell/oh-my-zsh
   # config.vm.provision "shell", path: "scripts/setup_zsh.sh", privileged: false
