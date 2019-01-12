@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # formatted print
 fprint()
 {
