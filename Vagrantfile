@@ -112,11 +112,8 @@ Vagrant.configure("2") do |config|
        echo 127.0.0.1 `hostname` | sudo tee -a /etc/hosts
     fi
 
-    # UPDATE REPO IF OLDER THAN 10 MIN
-    if [ "$[$(date +%s) - $(stat -c %Z /var/lib/apt/periodic/update-success-stamp)]" -ge 600000 ]; then
-      echo "apt cache older than 10 minutes"
-      apt-get update
-    fi
+    # UPDATE REPO
+    apt-get update
 
     # echo -e "\e[1;46m Forwarded Ports: \e[0m"
     echo -e "\e[1;46m \e[0m SETUP PORT FORWARD: 8000 >> 8088 "
